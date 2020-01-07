@@ -4,7 +4,7 @@
   "description": "",
   "main": "lib",
   "scripts": {
-    "start": "DEBUG=express:* node --preserve-symlinks ./lib/index.js",
+    "start": "node --preserve-symlinks ./lib/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

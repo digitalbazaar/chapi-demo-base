@@ -1,23 +1,22 @@
-// The Vue build version to load with the `import` command
-// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
+import Vue from 'vue';
+import App from './App.vue';
+import './quasar';
+import router from './router';
+import config from './config';
+
+// load the credential handler
 import * as polyfill from 'credential-handler-polyfill';
-import Vue from 'vue'
-import App from './App'
-import router from './router'
 
-Vue.config.productionTip = false
+const {MEDIATOR_ORIGIN} = config;
 
-const MEDIATOR_ORIGIN = 'https://authorization.localhost:33443';
+Vue.config.productionTip = false;
 
-/* eslint-disable no-new */
 new Vue({
-  el: '#app',
   router,
-  components: { App },
   created: async function() {
     await polyfill.loadOnce(
       MEDIATOR_ORIGIN + '/mediator?origin=' +
       encodeURIComponent(window.location.origin));
   },
-  template: '<App/>',
-})
+  render: h => h(App)
+}).$mount('#app');
