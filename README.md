@@ -19,6 +19,12 @@ npm start
 
 ## Front-end Development
 
+### Ignore changes to the public folder
+```bash
+# prevent assets in the public folder from showing as changed
+git update-index --assume-unchanged vue-components/public/
+```
+
 ### Symlink private assets
 ```bash
 cd vue-components
