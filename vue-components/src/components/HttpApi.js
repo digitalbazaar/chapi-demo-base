@@ -6,7 +6,10 @@ const api = create({
   timeout: 1000,
 });
 
-export async function verifyPresentation({presentation}) {
+// submit a DID prentation to the local HTTP API which will verify that the
+// DID presentation is valid and if so the backend will compose call
+// to a credential issuance API and return the signed credential here.
+export async function submitDidPresentation({presentation}) {
   const response = await api.post('/verify', {presentation});
   if(response.problem) {
     // a CLIENT_ERROR means that the HTTP request was successful, but the

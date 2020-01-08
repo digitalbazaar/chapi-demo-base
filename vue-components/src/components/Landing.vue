@@ -48,7 +48,7 @@ h4 {
 'use strict';
 
 import {requestDidAuth} from './mockUtils.js';
-import {verifyPresentation} from './HttpApi.js';
+import {submitDidPresentation} from './HttpApi.js';
 
 export default {
   name: 'Landing',
@@ -76,13 +76,15 @@ export default {
       console.log('Sending presentation to be verified...');
       console.log('TODO: a mock response of `{valid: false}` is expected.');
 
-      const result = await verifyPresentation({presentation});
+      const result = await submitDidPresentation({presentation});
       console.log('Verification result: ', JSON.stringify(result, null, 2));
 
       // TODO: inspect the result and act accordingly
       // result = {valid: true/false, error}
 
-      // TODO: prepopulate `flow` with received credentials information
+      // NOTE: at this stage, the DID has been received and verified
+
+      // make API call
 
       this.congratulate = presentation.holder;
     },
