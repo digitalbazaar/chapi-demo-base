@@ -47,7 +47,7 @@ h4 {
 <script>
 'use strict';
 
-import {requestOrganizationCredentials} from './mockUtils.js';
+import {requestDidAuth} from './mockUtils.js';
 import {verifyPresentation} from './HttpApi.js';
 
 export default {
@@ -59,7 +59,7 @@ export default {
   },
   methods: {
     async request() {
-      const response = await requestOrganizationCredentials(/*this.recipe.id*/);
+      const response = await requestDidAuth(/*this.recipe.id*/);
       if(!response) {
         return;
       }

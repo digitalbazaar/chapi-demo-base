@@ -7,7 +7,7 @@ import uuid from 'uuid-random';
 
 // import axios from 'axios';
 
-export async function requestOrganizationCredentials(/*recipeId*/) {
+export async function requestDidAuth() {
   console.log('request DID auth...');
   const query = {
     type: 'DIDAuth',
