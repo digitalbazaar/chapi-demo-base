@@ -1,0 +1,4 @@
+node_modules
+vue-components/dist
+vue-components/config
+vue-components/build

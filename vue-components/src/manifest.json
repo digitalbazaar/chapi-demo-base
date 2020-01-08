@@ -1,0 +1,11 @@
+{
+  "icons": [
+    {
+      "sizes": "48x48 64x64",
+      "src": "/images/logo-icon.svg",
+      "type": "image/svg"
+    }
+  ],
+  "name": "Demo Issuer",
+  "short_name": "Demo Issuer"
+}

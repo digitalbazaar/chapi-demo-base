@@ -1,0 +1,41 @@
+{
+  "name": "demo-issuer-integration",
+  "version": "0.0.1",
+  "description": "",
+  "main": "lib",
+  "scripts": {
+    "start": "node --preserve-symlinks ./lib/index.js",
+    "test": "mocha --timeout 10000 --exit",
+    "test-debug": "DEBUG=express:* mocha --timeout 10000 --exit",
+    "lint": "npx eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/digitalbazaar/demo-issuer-integration.git"
+  },
+  "author": {
+    "name": "Digital Bazaar, Inc.",
+    "email": "support@digitalbazaar.com",
+    "url": "https://digitalbazaar.com/"
+  },
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/digitalbazaar/demo-issuer-integration/issues"
+  },
+  "homepage": "https://github.com/digitalbazaar/demo-issuer-integration#readme",
+  "dependencies": {
+    "apisauce": "^1.1.1",
+    "async-handler": "0.0.3",
+    "body-parser": "^1.19.0",
+    "ejvm": "^1.0.5",
+    "express": "^4.17.1",
+    "express-async-handler": "^1.1.4"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^6.8.0",
+    "eslint-config-digitalbazaar": "^2.0.1",
+    "eslint-plugin-vue": "^6.1.2",
+    "mocha": "^7.0.0"
+  }
+}
