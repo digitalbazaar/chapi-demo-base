@@ -45,7 +45,7 @@ npm run serve
 ```
 ## Build the Front-end Bundle
 ```bash
-npm build
+npm run build
 # run the server
 cd ..
 npm start
