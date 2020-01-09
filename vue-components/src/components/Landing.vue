@@ -1,9 +1,17 @@
 <template>
   <div>
-    <div v-if="congratulate">
-      <h4>
-        Hello {{congratulate}}, you have successfully authenticated.
+    <div v-if="presentationForStorage">
+      <h1>store the digital credential</h1>
+      <h4 style="width: 450px; margin: 0 auto;">
+        Please click the store credential button below.
       </h4>
+      <q-btn
+        outline
+        color="white"
+        text-color="006699"
+        label="Store Credential"
+        class="q-mt-lg rounded-borders text-weight-medium g-width-100"
+        @click="store()" />
     </div>
     <div
       v-else
@@ -54,7 +62,7 @@ export default {
   name: 'Landing',
   data: function() {
     return {
-      congratulate: false
+      presentationForStorage: false
     };
   },
   methods: {
@@ -73,21 +81,22 @@ export default {
       this.holder = presentation.holder;
 
       // verify the presentation via HTTP API
-      console.log('Sending presentation to be verified...');
-      console.log('TODO: a mock response of `{valid: false}` is expected.');
+      console.log('Sending presentation for verification and issuance...');
 
-      const result = await submitDidPresentation({presentation});
-      console.log('Verification result: ', JSON.stringify(result, null, 2));
+      const presentationToStore = await submitDidPresentation({presentation});
+      console.log('Issuance result: ',
+        JSON.stringify(presentationToStore, null, 2));
 
-      // TODO: inspect the result and act accordingly
-      // result = {valid: true/false, error}
-
-      // NOTE: at this stage, the DID has been received and verified
-
-      // make API call
-
-      this.congratulate = presentation.holder;
+      this.presentationForStorage = presentationToStore;
     },
+    async store() {
+      // create WebCredential wrapper around the presentation to be stored
+      const wrappedPresentation = new WebCredential(
+        'VerifiablePresentation', this.presentationForStorage);
+
+      const result = await navigator.credentials.store(wrappedPresentation);
+      console.log('Storage result', result);
+    }
   }
 };
 </script>
