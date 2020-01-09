@@ -45,6 +45,7 @@ npm run serve
 ```
 ## Build the Front-end Bundle
 ```bash
+# in vue-components folder
 npm run build
 # run the server
 cd ..
