@@ -1,33 +1,41 @@
 <template>
   <div>
-    <div v-if="presentationForStorage">
-      <h1>store the digital credential</h1>
+    <div v-if="success">
+      <h1>credential stored successfully</h1>
       <h4 style="width: 450px; margin: 0 auto;">
-        Please click the store credential button below.
+        The credential has been stored in your digital wallet.
       </h4>
-      <q-btn
-        outline
-        color="white"
-        text-color="006699"
-        label="Store Credential"
-        class="q-mt-lg rounded-borders text-weight-medium g-width-100"
-        @click="store()" />
     </div>
-    <div
-      v-else
-      class="g-width-100">
-      <h1>secure a digital credential</h1>
-      <h4 style="width: 450px; margin: 0 auto;">
-        Please click the authenticate button below to begin the process of
-        securing your digital credential.
-      </h4>
-      <q-btn
-        outline
-        color="white"
-        text-color="006699"
-        label="Authenticate"
-        class="q-mt-lg rounded-borders text-weight-medium g-width-100"
-        @click="request()" />
+    <div v-else>
+      <div v-if="presentationForStorage">
+        <h1>store the digital credential</h1>
+        <h4 style="width: 450px; margin: 0 auto;">
+          Please click the store credential button below.
+        </h4>
+        <q-btn
+          outline
+          color="white"
+          text-color="006699"
+          label="Store Credential"
+          class="q-mt-lg rounded-borders text-weight-medium g-width-100"
+          @click="store()" />
+      </div>
+      <div
+        v-else
+        class="g-width-100">
+        <h1>secure a digital credential</h1>
+        <h4 style="width: 450px; margin: 0 auto;">
+          Please click the authenticate button below to begin the process of
+          securing your digital credential.
+        </h4>
+        <q-btn
+          outline
+          color="white"
+          text-color="006699"
+          label="Authenticate"
+          class="q-mt-lg rounded-borders text-weight-medium g-width-100"
+          @click="request()" />
+      </div>
     </div>
   </div>
 </template>
@@ -62,7 +70,8 @@ export default {
   name: 'Landing',
   data: function() {
     return {
-      presentationForStorage: false
+      presentationForStorage: false,
+      success: false,
     };
   },
   methods: {
@@ -96,6 +105,7 @@ export default {
 
       const result = await navigator.credentials.store(wrappedPresentation);
       console.log('Storage result', result);
+      this.success = true;
     }
   }
 };
