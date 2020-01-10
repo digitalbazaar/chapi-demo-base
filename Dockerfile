@@ -9,7 +9,7 @@ USER node
 WORKDIR /home/node/app
 RUN npm ci --no-optional --production
 RUN cd vue-components && npm i
-RUN cd vue-components && npm run build
+RUN cd vue-components && npm run build-production
 
 FROM base AS release
 COPY --from=build /home/node/app/node_modules ./node_modules
