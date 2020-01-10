@@ -1,10 +1,18 @@
 module.exports = {
   configureWebpack: config => {
     if(process.env.NODE_ENV === 'production') {
+      console.log('Setting MEDIATOR for production.');
       // mutate config for production...
       config.entry = {
         app: [
           './src/main-production.js'
+        ]
+      };
+    } else {
+      console.log('Setting MEDIATOR for development.');
+      config.entry = {
+        app: [
+          './src/main.js'
         ]
       };
     }
