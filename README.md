@@ -52,3 +52,18 @@ cd ..
 npm start
 ```
 
+## Packaging
+```bash
+rm -rf vue-components/public
+# modify the lines below to link to your project packaging directory
+ln -sf .../demo-issuer-integration-private/PROJECT/packaging .
+cp -a .../demo-issuer-integration-private/PROJECT/public vue-components/
+cp packaging/config.sh.example packaging/config.
+# Add the cloud service provider API access tokens
+vi config.sh
+# these lines can be run unmodified
+npm i --package-lock=true && rm -rf node_modules
+cd vue-components && npm i --package-lock=true && rm -rf node_modules
+../veres-product-packager/build-vm -s true -c packaging/config.sh
+# To boot production server, read instructions in packaging/README.md
+```
