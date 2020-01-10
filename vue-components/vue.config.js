@@ -1,4 +1,14 @@
 module.exports = {
+  configureWebpack: config => {
+    if(process.env.NODE_ENV === 'production') {
+      // mutate config for production...
+      config.entry = {
+        app: [
+          './src/main-production.js'
+        ]
+      };
+    }
+  },
   pluginOptions: {
     quasar: {
       importStrategy: 'kebab',

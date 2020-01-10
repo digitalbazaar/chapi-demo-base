@@ -7,7 +7,7 @@ import router from './router';
 import * as polyfill from 'credential-handler-polyfill';
 
 // this is the mediator site to use for production systems
-const MEDIATOR_ORIGIN = 'https://authorization.localhost:33443';
+const MEDIATOR_ORIGIN = 'https://authn.io';
 
 Vue.config.productionTip = false;
 
