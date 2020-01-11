@@ -105,6 +105,12 @@ export default {
 
       const result = await navigator.credentials.store(wrappedPresentation);
       console.log('Storage result', result);
+
+      // user closed or cancelled CHAPI, stay on the same screen
+      if(result === null) {
+        return;
+      }
+
       this.success = true;
     }
   }
