@@ -1,7 +1,8 @@
 <template>
-  <div class="home row justify-center">
+  <div class="home row justify-center q-mx-md">
     <div
-      class="shadow-6 q-mx-md bg-white q-pa-xl q-mt-md">
+      class="shadow-6 bg-white q-pa-xl q-mt-md full-width"
+      style="max-width: 900px">
       <Landing />
     </div>
   </div>
