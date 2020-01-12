@@ -1,7 +1,11 @@
 <template>
-  <div id="app">
+  <div
+    id="app"
+    style="max-width: 1200px"
+    class="q-mx-auto">
     <img
       alt="Demo Header"
+      class="full-width"
       :src="`${publicPath}assets/mock_nav_1200_width.png`">
     <router-view />
   </div>

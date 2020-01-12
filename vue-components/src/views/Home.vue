@@ -1,19 +1,13 @@
 <template>
-  <div class="home">
-    <div class="box shadow-6">
+  <div class="home row justify-center">
+    <div
+      class="shadow-6 q-mx-md bg-white q-pa-xl q-mt-md">
       <Landing />
     </div>
   </div>
 </template>
 
 <style lang="scss">
-.box {
-  margin-top: 50px;
-  margin-left: 20%;
-  margin-right: 20%;
-  padding: 50px;
-  background-color: white;
-}
 </style>
 
 <script>
