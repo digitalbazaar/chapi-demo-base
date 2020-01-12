@@ -2,14 +2,18 @@
   <div>
     <div v-if="success">
       <h1>credential stored successfully</h1>
-      <h4 style="max-width: 450px; margin: 0 auto;">
+      <h4
+        class="q-mx-auto"
+        style="max-width: 450px">
         The credential has been stored in your digital wallet.
       </h4>
     </div>
     <div v-else>
       <div v-if="presentationForStorage">
         <h1>store the digital credential</h1>
-        <h4 style="max-width: 450px; margin: 0 auto;">
+        <h4
+          class="q-mx-auto"
+          style="max-width: 450px">
           Please click the store credential button below.
         </h4>
         <q-btn
@@ -23,7 +27,9 @@
       <div
         v-else>
         <h1>secure a digital credential</h1>
-        <h4 style="max-width: 450px; margin: 0 auto;">
+        <h4
+          class="q-mx-auto"
+          style="max-width: 450px">
           Please click the authenticate button below to begin the process of
           securing your digital credential.
         </h4>
