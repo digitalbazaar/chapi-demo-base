@@ -60,6 +60,7 @@ The front end server will run on [https://localhost:19443](https://localhost:194
 ### Steps
 
 [Login steps.](https://github.com/digitalbazaar/demo-issuer-integration/blob/add-public-files/LOGIN.md)
+[Store Credential steps.](https://github.com/digitalbazaar/demo-issuer-integration/blob/add-public-files/STORE.md)
 
 ---
 
