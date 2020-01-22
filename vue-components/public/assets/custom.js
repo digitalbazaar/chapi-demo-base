@@ -24,7 +24,7 @@ kv.recipient = {
 kv.credential = {
   '@context': [
     'https://www.w3.org/2018/credentials/v1',
-    'https://schema.org'
+    'https://schema.org/Person'
   ],
   id: 'http://example.edu/credentials/1872',
   type: ['VerifiableCredential', 'AlumniCredential'],
