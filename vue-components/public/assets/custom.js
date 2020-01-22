@@ -1,6 +1,22 @@
 'use strict';
 
+const {image} = require('./image');
+
 const kv = exports.keyValueStore = {};
+
+const issuer = kv.issuer = {
+  id: 'did:v1:test:nym:z6Mkq4uyWFYWP9rPrrKhJnbU7jBDBc2p8gXJHyQ26L6uS8uD',
+  image
+};
+
+kv.recipient = {
+  familyName: 'Park',
+  givenName: 'John',
+  alumniOf: {
+    id: 'did:example:c276e12ec21ebfeb1f712ebc6f1',
+    name: 'Example University'
+  }
+};
 
 // This credentialSubject should follow a schema from schema.org
 // This example uses https://schema.org/Person for the credentialSubject
@@ -11,8 +27,10 @@ kv.credential = {
   ],
   id: 'http://example.edu/credentials/1872',
   type: ['VerifiableCredential', 'AlumniCredential'],
-  issuer: 'https://example.edu/issuers/565049',
+  issuer,
   issuanceDate: '2010-01-01T19:73:24Z',
+  name: 'University Enrollment Credential',
+  description: 'This verifies enrollment in a University',
   credentialSubject: {
     id: 'did:example:ebfeb1f712ebc6f1c276e12ec21',
     familyName: 'Park',
