@@ -6,6 +6,7 @@ const kv = exports.keyValueStore = {};
 
 const issuer = kv.issuer = {
   id: 'did:v1:test:nym:z6Mkq4uyWFYWP9rPrrKhJnbU7jBDBc2p8gXJHyQ26L6uS8uD',
+  // This will appear in the Credential Card.
   image
 };
 
@@ -29,7 +30,9 @@ kv.credential = {
   type: ['VerifiableCredential', 'AlumniCredential'],
   issuer,
   issuanceDate: '2010-01-01T19:73:24Z',
+  // This will appear in the Credential Card
   name: 'University Enrollment Credential',
+  // This will appear in the Credential Card
   description: 'This verifies enrollment in a University',
   credentialSubject: {
     id: 'did:example:ebfeb1f712ebc6f1c276e12ec21',
