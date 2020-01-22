@@ -7,7 +7,9 @@
     "start": "./build-vue.sh && node --preserve-symlinks ./lib/index.js",
     "test": "mocha --timeout 10000 --exit",
     "test-debug": "DEBUG=express:* mocha --timeout 10000 --exit",
-    "lint": "npx eslint ."
+    "lint": "npx eslint .",
+    "start-production": "NODE_ENV=production npm run start & cd vue-components && npm run build-production && npm run serve-production",
+    "postinstall": "cd vue-components && npm i"
   },
   "repository": {
     "type": "git",
