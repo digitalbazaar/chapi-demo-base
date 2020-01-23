@@ -1,3 +1,6 @@
+/*!
+ * Copyright (c) 2020 Digital Bazaar, Inc. All rights reserved.
+ */
 'use strict';
 
 const {image} = require('./image');
@@ -24,12 +27,12 @@ kv.recipient = {
 kv.credential = {
   '@context': [
     'https://www.w3.org/2018/credentials/v1',
-    'https://schema.org/Person'
+    'https://schema.org/'
   ],
   id: 'http://example.edu/credentials/1872',
   type: ['VerifiableCredential', 'AlumniCredential'],
   issuer,
-  issuanceDate: '2010-01-01T19:73:24Z',
+  issuanceDate: new Date().toISOString(),
   // This will appear in the Credential Card
   name: 'University Enrollment Credential',
   // This will appear in the Credential Card
