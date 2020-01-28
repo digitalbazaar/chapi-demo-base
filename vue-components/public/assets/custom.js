@@ -30,7 +30,7 @@ kv.credential = {
     'https://schema.org/'
   ],
   id: 'http://example.edu/credentials/1872',
-  type: ['VerifiableCredential', 'AlumniCredential'],
+  type: ['VerifiableCredential', 'Person'],
   issuer,
   issuanceDate: new Date().toISOString(),
   // This will appear in the Credential Card
