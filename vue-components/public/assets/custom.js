@@ -32,24 +32,26 @@ kv.recipient = {
 kv.credential = {
   '@context': [
     'https://www.w3.org/2018/credentials/v1',
-    'https://schema.org/Person'
+    'https://w3id.org/citizenship/v1'
   ],
   id: 'http://example.edu/credentials/1872',
-  type: ['VerifiableCredential', 'AlumniCredential'],
+  type: ['VerifiableCredential', 'PermanentResidentCard'],
   issuer,
   issuanceDate: '2010-01-01T19:73:24Z',
   // This will appear in the Credential Card
-  name: 'University Enrollment Credential',
+  name: 'Permanent Resident Credential',
   // This will appear in the Credential Card
-  description: 'This verifies enrollment in a University',
+  description: 'Verifies this person is a permanent resident',
   credentialSubject: {
     id: 'did:example:ebfeb1f712ebc6f1c276e12ec21',
+    type: 'PermanentResident',
     familyName: 'Park',
     givenName: 'John',
-    alumniOf: {
-      id: 'did:example:c276e12ec21ebfeb1f712ebc6f1',
-      name: 'Example University'
-    }
+    gender: 'male',
+    birthCountry: 'Korea',
+    residentSince: '1992-02-12T22:10:33.821Z',
+    birthDate: '1987-02-12T22:10:33.821Z',
+    lprNumber: '678-434-875'
   }
 };
 
