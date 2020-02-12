@@ -2,6 +2,14 @@
 
 const {image} = require('./image');
 
+// these 2 consts comprise the url called on
+// to issue an credential
+const issuerBaseUrl = 'https://localhost:39443';
+exports.issuerEndPoint = `${issuerBaseUrl}/vc-issuer/issue`;
+
+// The id of an issuer instance on veres-issuer
+exports.issuerInstanceId = '1cce52d9-9cef-4c4e-83f3-9722d0c89e2b';
+
 const kv = exports.keyValueStore = {};
 
 const issuer = kv.issuer = {
