@@ -54,15 +54,3 @@ kv.credential = {
     lprNumber: '678-434-875'
   }
 };
-
-kv.proof = {
-  type: 'RsaSignature2018',
-  created: '2017-06-18T21:19:10Z',
-  proofPurpose: 'assertionMethod',
-  verificationMethod: 'https://example.edu/issuers/keys/1',
-  // jws stands for: https://en.wikipedia.org/wiki/JSON_Web_Signature
-  jws: 'eyJhbGciOiJSUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19' +
-    'TCYt5XsITJX1CxPCT8yAVTVkIEqPbChOMqsLfRoPsnsgw5WEuts01mqpQy7UJ' +
-    'iN5mgRxDWUcX16dUEMGlv50aqzpqh4Qktb3rkBuQy72IFLOqV0GzS245kronKb7' +
-    '8cPN25DGlcTwLtjPAYuNzVBAh4vGHSrQyHUdBBPM'
-};
