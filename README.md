@@ -1,4 +1,4 @@
-![Issuer Authentication](https://github.com/digitalbazaar/demo-issuer-integration/raw/add-public-files/images/auth-1.png)
+![Issuer Authentication](https://github.com/digitalbazaar/demo-issuer-integration/raw/master/images/auth-1.png)
 
 # demo-issuer-integration
 
@@ -59,9 +59,9 @@ The front end server will run on [https://localhost:19443](https://localhost:194
 
 ### Steps
 
-[Login steps.](https://github.com/digitalbazaar/demo-issuer-integration/blob/add-public-files/LOGIN.md)
+[Login steps.](https://github.com/digitalbazaar/demo-issuer-integration/blob/master/LOGIN.md)
 
-[Store Credential steps.](https://github.com/digitalbazaar/demo-issuer-integration/blob/add-public-files/STORE.md)
+[Store Credential steps.](https://github.com/digitalbazaar/demo-issuer-integration/blob/master/STORE.md)
 
 ---
 
